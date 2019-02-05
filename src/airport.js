@@ -2,8 +2,9 @@ function Airport() {
   this.planes = []
 };
 
-Airport.prototype.land = function(plane) {
-  this.planes.push(plane);
+Airport.prototype.land = function(plane, weather = new Weather()) {
+  // let weather = new Weather();
+  if (weather.getWeather() === 'Clear') {this.planes.push(plane)};
 };
 
 Airport.prototype.takeOff = function(plane) {
