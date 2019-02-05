@@ -11,4 +11,11 @@ describe('Airport', function() {
       expect(gatwick.planes).toEqual([])
     });
   });
+
+  describe('landing planes at an airport', function() {
+    it('after plane has landed, it should show a plane in the airport array', function() {
+      gatwick.land('plane');
+      expect(gatwick.planes).toEqual(['plane']);
+    })
+  })
 });

@@ -2,6 +2,6 @@ function Airport() {
   this.planes = []
 };
 
-
-// let gatwick = new Airport()
-// console.log(gatwick.planes);
+Airport.prototype.land = function(plane) {
+  this.planes.push(plane);
+}
